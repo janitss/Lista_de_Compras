@@ -54,16 +54,23 @@ li {
   background-color: #f4d58d;
   border: none;
   padding: 0.5em;
+  
 }
 
 input {
   border: none;
   padding: 0.5em;
-  width: 244px;
+  width: 230px;
 }
 
 .item-qtde {
   border: none;
   padding: 0.5em;
-  width: 52px;
+  width: 28px;
+}
+
+.item-um {
+  border: none;
+  padding: 0.5em;
+  width: 20px;
 }
