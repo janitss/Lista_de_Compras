@@ -74,3 +74,99 @@ input {
   padding: 0.5em;
   width: 20px;
 }
+
+/* responsivo */
+
+
+@keyframes aumentarLargura{
+  from{
+      width: 0;
+  }
+  to{
+      width: 100%;
+  }
+}
+
+@keyframes aumentarAltura{
+  from{
+      height: 0;
+  }
+  to{
+      height: 100%;
+  }
+}
+
+
+
+/* @MEDIA */
+@media only screen and (min-width: 768px){
+  .linha{
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+  }
+  footer nav .redes-sociais {
+      display: flex;
+      justify-content: center;
+  }
+  header{
+      padding: 30px 0 0;
+  }
+  header .coluna img{
+      max-width: 250px;
+      border-radius: 100%;
+  }
+  .container{
+      width: 100%;
+      max-width: 1125px;
+      margin: 0 auto;
+      padding: 30px;
+  }
+  header .coluna-direita{
+      text-align: left;
+  }
+  main .coluna section{
+      /* border: 2px solid #d4e9ff; */
+      border: 2px solid transparent;
+      padding: 20px;
+      position: relative;
+  }
+  main .coluna section span{
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border: 2px solid transparent;
+  }
+  main .coluna section .topo-direita{
+      top: -2px;
+      left: -2px;
+      animation-name: aumentarLargura, aumentarAltura;
+      animation-duration: 1s, 1s;
+      animation-delay: 2s, 3s;
+      animation-fill-mode: forwards;
+      border-top-color: #d4e9ff;
+      border-right-color: #d4e9ff;
+  }
+  main .coluna section .baixo-esquerda{
+      bottom: -2px;
+      right: -2px;
+      animation-name: aumentarLargura, aumentarAltura;
+      animation-duration: 1s, 1s;
+      animation-delay: 4s, 5s;
+      animation-fill-mode: forwards;
+      border-bottom-color: #d4e9ff;
+      border-left-color: #d4e9ff;
+  }
+  main .coluna{
+      padding: 0;
+  }
+}
+
+@media only screen and (min-width: 991px){
+
+  header .coluna-direita{
+      flex-basis: 70%;
+  }
+}
